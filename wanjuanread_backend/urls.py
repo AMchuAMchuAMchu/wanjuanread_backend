@@ -17,12 +17,15 @@ from django.contrib import admin
 from django.urls import path
 
 # 如何引入别的views的同时可以保证不混乱...(起别名)
+from django.views.generic import TemplateView
+
 from like import views as like_views
 from user import views as user_views
+from wanjuanread_end import views as wj_views
 
 urlpatterns = [
-    path(r'likeData/',like_views.likeData),
-    path(r'allBooks/',like_views.allBooks),
-    path(r'userRegister/',user_views.userRegister),
-    path(r'login/',user_views.login),
+    path(r'likeData/', like_views.likeData),
+    path(r'allBooks/', like_views.allBooks),
+    path(r'userRegister/', user_views.userRegister),
+    path(r'login/', user_views.login),
 ]
