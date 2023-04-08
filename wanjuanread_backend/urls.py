@@ -24,4 +24,5 @@ urlpatterns = [
     path(r'likeData/',like_views.likeData),
     path(r'allBooks/',like_views.allBooks),
     path(r'userRegister/',user_views.userRegister),
+    path(r'login/',user_views.login),
 ]
