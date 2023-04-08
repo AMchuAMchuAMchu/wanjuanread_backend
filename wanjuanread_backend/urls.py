@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from like import views
+# 如何引入别的views的同时可以保证不混乱...(起别名)
+from like import views as like_views
+from user import views as user_views
 
 urlpatterns = [
-    path(r'likeData/',views.likeData),
-    path(r'allBooks/',views.allBooks),
+    path(r'likeData/',like_views.likeData),
+    path(r'allBooks/',like_views.allBooks),
+    path(r'userRegister/',user_views.userRegister),
 ]
